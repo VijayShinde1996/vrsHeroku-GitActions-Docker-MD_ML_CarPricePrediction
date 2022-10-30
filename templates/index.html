@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Car Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Present_Price" placeholder="What is The Current Showroom Price in Lakhs (Ex- 5.54)" required="required" /><br>
+    	<input type="text" name="Kms_Driven" placeholder="How Many Kilometers Drived? (Ex- 25000)" required="required" /><br>
+        <input type="text" name="Fuel_Type" placeholder="Fuel Type? (Ex- Petrol=0,Diesel=1,CNG=2,Battery=2)" required="required" /><br>
+        <input type="text" name="Seller_Type" placeholder="Are You a Dealer/Individual? (Ex- Dealer=0,Individual=1)" required="required" /><br>
+        <input type="text" name="Transmission" placeholder="What is The Transmission Type? (Ex- Manual=0,Automatic=1)" required="required" /><br>
+        <input type="text" name="Owner" placeholder="How many Owners Previously had the Car? (Ex- 0/1/2/3)" required="required" /><br>
+        <input type="text" name="Car_Age_in_years" placeholder="How Old Your Car is? (Current year- Manufacturing year)" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+              {{prediction_text}}
+        <h2>Developed by: Vijay Shinde</h2>
+   <br>
+ </div>
+</body>
+</html>
