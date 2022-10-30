@@ -26,7 +26,7 @@ def predict():
     data=[float(i) for i in request.form.values()]
     final_input=scalling.transform(np.array(data).reshape(1,-1))
     output=round(model.predict(final_input)[0],2)
-    return render_template("index.html",prediction_text="The Predicted Car Price is: {}".format(output))
+    return render_template("index.html",prediction_text="The Predicted Car Price is: {} Lakhs".format(output))
 
 if __name__ == ('__main__'):
     APP17.run(debug = True)
