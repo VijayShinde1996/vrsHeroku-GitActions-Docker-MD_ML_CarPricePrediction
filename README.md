@@ -7,3 +7,4 @@ API Link - https://vrsmlcarpricepredict.herokuapp.com
 2. [HerokuAccount](https://heroku.com)
 3. [PycharmIDE](//https://www.jetbrains.com/)
 4. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+<p><img align="right" alt="gif" src="https://github.com/VijayShinde1996/vrsHeroku-GitActions-Docker-MD_ML_CarPricePrediction/blob/main/Vechile_Price.gif" width="1500" height="320" /></p>
